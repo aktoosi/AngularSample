@@ -1,0 +1,6 @@
+<small *ngIf='!invalidFlag' >{{errormessage}}</small>
+<div>
+userName: <input type="text" name="userName" [(ngModel)]="username" >
+password:<input type="password" name="password" [(ngModel)]="password">
+<button (click)='save()'>save</button> 
+</div>
