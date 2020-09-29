@@ -14,21 +14,22 @@ export class LoginComponent implements OnInit {
   errormessage = "invalid username or password";
   invalidFlag: boolean = false;
   constructor(private router: Router) { }
-  
+
 
 
   ngOnInit() {
+  
   }
   save() {
     this.invaldInput();
   }
   invaldInput() {
     if (this.username === "atena" && this.password === "123") {
-      this.router.navigate(['welcome',this.username]);
-      this.invalidFlag = true;
+      this.router.navigate(['welcome', this.username]);
+      this.invalidFlag = false;
     }
     else {
-      this.invalidFlag = false;
+      this.invalidFlag = true;
     }
   }
 
